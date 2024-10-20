@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <form method="post" action="uniroma1.it">
+            <table>
+                <tr>
+                    <td>cognome: </td>
+                    <td><input type="text" name="cognome" maxlength="40" placeholder="inserire cognome" required></td>
+                </tr>
+                <tr>
+                    <td>nome: </td>
+                    <td><input type="text" name="nome" maxlength="30" placeholder="inserire nome" required></td>
+                </tr>
+                <tr>
+                    <td>matricola:</td>
+                    <td><input type="number" name="matricola" size="40" minlength="7" maxlength="7" min="0" max="1234567" placeholder="inserire matricola"></td>
+                </tr>
+                <tr>
+                    <td>regione:</td>
+                    <td><select size="1" rows="20" name="regione" required>
+                        <option selected value=""> Seleziona </option>
+                        <option value="Lazio"> Lazio</option>
+                        <option value="Liguria"> Liguria</option>
+                        <option value="Campania"> Campania</option>
+                    </td>
+                    <tr>
+                        <td>mail: </td>
+                        <td><input type="email" name="cognome" maxlength="30" placeholder="inserire mail"></td>
+                    </tr>
+                    <tr>
+                        <td>telefono: </td>
+                        <td><input type="tel" name="cognome" maxlength="30" placeholder="inserire telefono"></td>
+                    </tr>
+                    <tr>
+                        <td>status:</td>
+                        <td><input type="text" name="status" list="listastatus" placeholder="status corrente">
+                        <datalist id="listastatus">
+                            <option value="in corso"></option>
+                            <option value="fuori corso"></option>
+                            <option value="ripetente"></option>
+                            <option value="part-time"></option>
+                        </datalist></td>
+                    </tr>
+                    <tr>
+                        <td>richieste particolari:</td>
+                    </tr>
+                    <tr>
+                        <td colspan=2><textarea cols=60 rows=12></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="invio">
+                            <input type="reset" value="reset"></td>
+                    </tr>
+
+            </table> 
+        </form>
+    </body>
+</html>

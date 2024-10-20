@@ -1,0 +1,7 @@
+.flexbox {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.flexbox > .cell:nth-child(1) { flex: 2 0 300px; background-color: red;}
+.flexbox > .cell:nth-child(2) { flex: 1 1 300px; background-color: yellow;}
+.flexbox > .cell:nth-child(3) { flex: 0 2 300px; background-color: blue;}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<form action="" method="post" name="eseform" enctype="multipart/form-data">
+    cognome e nome:
+    <input type="text" name="nome" size="50" maxlength="50" required>
+    <br>
+    data di nascita:
+    <input type="date" name="ddn">
+    <br>
+    CAP:
+    <input type="text" name="cap" size="5" maxlength="5" pattern="[0-9]{5}">
+    <br>
+    sono uno studente lavoratore
+    <input type="checkbox" name="lavoratore">
+    <br>
+    foto:
+    <input type="file" name="foto" accept="image/*">
+    <!-- ALTERNATIVA:
+    <input type="file" name="foto" accept=".png,.jpeg,.jpg,.gif,.png">
+    -->
+    <br>
+    descrizione lavoro:
+    <input type="text" name="descr" size="80" maxlength="80">
+    <br>
+    <br>
+    <input type="submit" value="Invia">
+    <input type="reset" value="Reset">
+</form>
+</body>
+</html>

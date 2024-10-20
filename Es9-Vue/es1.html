@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodotto in vendita</title>
+
+    <script src="http://unpkg.com/vue"></script>
+    <script src="/app.js" defer></script>
+    <link rel="stylesheet" href="style.css"></style>
+</head>
+<body>
+    <div class="nav-bar"></div>
+    <div id="vueApp">
+        <div class="cart">
+            <p>Carrello {{cart}}</p>
+        </div>
+
+        <div class="product" v-if="loaded">
+            <div class="product-image">
+                <img :src="image">
+            </div>
+
+            <div class="product-info">
+                <h1> Prodotto: {{product}}</h1>
+                Descrizione: {{description}}
+                <p v-if="disp > 10 && onSale">Disponibile</p>
+                <p v-else-if="disp > 0 && onSale">Ultime scorte!</p>
+                <p v-else>Non disponibile</p>
+
+                <ul>
+                    <li v-for="d in details">{{d}}</li>
+                </ul>
+
+                <div class="color-box"  v-for="(v,i) in variants" :key="v.id" :style="{backgroundColor: v.color}" @click="updateVariant(i)">
+                    {{v.name}}
+                </div>
+
+                <button @click="addToCart()" :disabled="!onSale || disp==0" :class="{disabledButton: !onSale || disp == 0}">
+                    Aggiungi al carrello
+                </button>
+            </div>
+        </div> 
+    
+        <div v-else class="loader"></div>
+    </div>
+</body>
+</html>

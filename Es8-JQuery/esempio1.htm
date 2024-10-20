@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esempio 1</title>
+    <link rel="shortcut icon" href="#">
+    <script src="/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".c1").click(function() {
+                $(this).css("color", "blue");
+            });
+            $(".c1").dblclick(function() {
+                $(this).hide();
+            });
+            $("span.c2").click(function() {
+                $(".c1").hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li>Il click di ogni elemento di classe c1 fa diventare l'elemento di colore blu</li>
+        <li>Il doppio click di ogni elemento di classe c1 fa sparire l'elemento</li>
+        <li>Il click su qualsiasi elemento span di classe c2 fa sparire tutti gli elementi di classe c1</li>
+    </ul>
+    <hr/>
+    <hr/>
+    <div>Div 1</div>
+    <div>Div 2</div>
+    <div>Div 3</div>
+    <span class="c1">Primo span classe c1</span><br/>
+    <span class="c2">Primo span classe c2</span><br/>
+    <span class="c1">Secondo span classe c1</span><br/>
+    <span class="c2">Secondo span classe c2</span><br/>
+    <span class="c1">Terzo span classe c1</span><br/>
+    <span class="c2">Terzo span classe c2</span>
+    <div class="c1">Div classe c1</div>
+    <div class="c2">Div classe c2</div>
+</body>
+</html>

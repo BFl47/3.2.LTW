@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form method="get" action="uniroma1.it">
+        <table>
+            <tr>
+                <td align="right">cognome e nome:</td>
+                <td><input type="text" name="cognome e nome" maxlength=40 pattern="\D*" required></td>
+            </tr>
+            <tr>
+                <td align="right">data: </td>
+                <td><input type="date" name="data"></td>
+            </tr>
+            <tr>
+                <td align="right">codice fiscale:</td>
+                <td><input type="text" name="cf" maxlength=16 pattern="[A-Z]{6}\d{2}[A-Z]\d{2}[A-Z]\d{3}[A-Z]" required></td>
+            </tr>
+            <tr>
+                <td align="right">CAP:</td>
+                <td><input type="text" minlength=5 maxlength=5 pattern="\d{5}"></td>
+            </tr>
+            <tr>
+                <td align="right">telefono:</td>
+                <td><input type="tel" pattern="\+\d{2}-\d{3}-d{7}"></td>
+            </tr>
+            <tr>
+                <td align="right">pagina web:</td>
+                <td><input type="url"></td>
+            </tr>
+            <tr>
+                <td align="right">studente lavoratore:</td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td align="right">foto:</td>
+                <td><input type="file" accept="image/*" multiple></td>
+            </tr>
+            <tr>
+                <td align="right">descrizione del lavoro svolto:</td>
+                <td colspan=2><textarea maxlength=80></textarea></td>
+            </tr>
+            <tr>
+                <td align="right"><input type="submit" value="Invia"></td>
+                <td><input type="reset" value="Reset"></td> 
+            </tr>
+        </table>
+        </form>
+    </body>
+</html>

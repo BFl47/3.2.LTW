@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="application/javascript" src="script.js"></script>
+    </head>
+    <body>
+        <form method="post" action="" name="form" onsubmit="return validaForm();">
+            <table>
+                <tr>
+                    <td>cognome: </td>
+                    <td><input type="text" name="cognome" maxlength="40" placeholder="inserire cognome"></td>
+                </tr>
+                <tr>
+                    <td>nome: </td>
+                    <td><input type="text" name="nome" maxlength="30" placeholder="inserire nome"></td>
+                </tr>
+                <tr>
+                    <td>matricola:</td>
+                    <td><input type="text" name="matricola" maxlength="12" placeholder="inserire matricola"></td>
+                </tr>
+                <tr>
+                    <td>regione:</td>
+                    <td><select size="1" rows="20" name="regione">
+                        <option selected value="nulla"> Seleziona </option>
+                        <option value="Lazio"> Lazio</option>
+                        <option value="Liguria"> Liguria</option>
+                        <option value="Campania"> Campania</option>
+                    </td>
+                    <tr>
+                        <td>mail: </td>
+                        <td><input type="text" name="mail" maxlength="30" placeholder="inserire mail"></td>
+                    </tr>
+                    <tr>
+                        <td>telefono: </td>
+                        <td><input type="text" name="telefono" maxlength="15" placeholder="inserire telefono"></td>
+                    </tr>
+                    <tr>
+                        <td>richieste particolari:</td>
+                    </tr>
+                    <tr>
+                        <td colspan=2><textarea cols=60 rows=12></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="invio">
+                            <input type="reset" value="reset"></td>
+                    </tr>
+
+            </table> 
+        </form>
+    </body>
+</html>

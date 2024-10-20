@@ -1,0 +1,16 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.flexbox {
+    display: flex;
+}
+.flexbox > .cell { flex-grow: 1;}
+
+.cell:nth-child(1) { background-color: orange; }
+.cell:nth-child(2) { background-color: yellow; }
+.cell:nth-child(3) { background-color: greenyellow; }
+
+
+
+

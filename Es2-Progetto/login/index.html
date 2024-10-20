@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="shortcut icon" href="../assets/favicon-32x32.png">
+    <link rel="stylesheet" href="./sign-in.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <script src="./rememberMe.js" type="application/javascript"></script>
+</head>
+
+<body class="text-center">
+    <form name="myForm" action="login.php" method="post" class="form-signin m-auto" onsubmit="alertRmb()">
+        <img src="../assets/apple-touch-icon.png" class="mb-2" width="50px">
+        <h1 class="mb-3">Login</h1>
+        <input type="email" placeholder="Email Address" name="inputEmail" class="form-control" required autofocus>
+        <input type="password" placeholder="Password" name="inputPassword" class="form-control" required>
+        <div id="divRemember" class="checkbox mb-2">
+            <input type="checkbox" name="rememeber" id="rmb">
+            <label for="rmb">Remember me</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Send!</button>
+    </form>
+</body>
+</html>

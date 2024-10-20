@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="application/javascript">
+    function controllaCAP() {
+      if (document.eseform.cap.value.length != 5) {
+        alert("Il CAP deve contenere 5 cifre");
+        return false;
+      }
+      if (isNaN(document.eseform.cap.value)) {
+        alert("Il CAP deve essere un numero");
+        return false;
+      }
+      return true;
+    }
+    function controllaNome() {
+      if (!isNaN(document.eseform.nome.value)) {
+        alert("Il cognome e nome non può essere un numero");
+        return false;
+      }
+      return true;
+    }
+    function validaInvio() {
+      if (document.eseform.nome.value=="") {
+        alert("Inserire cognome e nome");
+        return false;
+      }
+      if (document.querySelector('input[name=sesso]:checked') == null) {
+        alert("Selezionare il sesso");
+        return false;
+      }
+      if (document.eseform.ateneo.value=="nessuno") {
+        alert("Selezionare un ateneo");
+        return false;
+      }
+      if (document.eseform.lavoratore.checked && document.eseform.descr.value=="") {
+        alert("Hai dichiarato di essere uno studente lavoratore: devi compilare il campo descrizione lavoro");
+        return false;
+      }
+      if (!document.eseform.lavoratore.checked && document.eseform.descr.value!="") {
+        alert("Non hai dichiarato di essere uno studente lavoratore: quindi perché mai hai compilato la descrizione del lavoro?");
+        return false;
+      }
+      alert("Dati inseriti correttamente");
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <form action="" method="post" name="eseform" onsubmit="return validaInvio();">
+    cognome e nome:
+    <input type="text" name="nome" size="50" maxlength="50" 
+      onchange="return controllaNome();">
+    <br>
+    sesso:
+    <input type="radio" name="sesso" value="M"> M
+    <input type="radio" name="sesso" value="F"> F
+    <br>
+    ateneo:
+    <select name="ateneo">
+      <option value="nessuno" selected></option>
+      <option value="sapienza">La Sapienza</option>
+      <option value="torvergata">Tor Vergata</option>
+      <option value="romatre">Roma Tre</option>
+    </select>
+    <br>
+    CAP: 
+    <input type="text" name="cap" size="5" maxlength="5" onchange="return controllaCAP();">
+    <br>
+    sono uno studente lavoratore
+    <input type="checkbox" name="lavoratore">
+    <br>
+    descrizione lavoro:
+    <input type="text" name="descr" size="80" maxlength="80">
+    <br>
+    <br>
+    <input type="submit" value="Invia">
+    <input type="reset" value="Reset">
+  </form>
+</body>
+</html>

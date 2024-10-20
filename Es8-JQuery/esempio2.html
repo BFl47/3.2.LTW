@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esempio 2</title>
+    <script src="/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#bottone1").click(function() {
+                $("h1").empty();
+            });
+            $("#bottone2").click(function() {
+                $("#primoDiv").css("color", "red");
+            });
+            $("#bottone3").mouseenter(function() {
+                $("#secondoDiv").text("abc");
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>Primo titolo</h1>
+    <h1>Secondo titolo</h1>
+    <h1>Terzo titolo</h1>
+    <br/>
+    <button id="bottone1">Bottone 1</button>
+    <button id="bottone2">Bottone 2</button>
+    <button id="bottone3">Bottone 3</button>
+    <br/>
+    <div id="primoDiv">Primo elemento div</div>
+    <div id="secondoDiv">Secondo elemento div</div>
+    <hr/>
+</body>
+</html>

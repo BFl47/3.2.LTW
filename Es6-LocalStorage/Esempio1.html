@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esempio1</title>
+    <script>
+        function inizializzaStorageUtenti(){
+            if (typeof(localStorage.utenti) == "undefined") {
+                localStorage.utenti="[]";
+            }
+        }
+        function resetStorageUtenti(){
+            localStorage.utenti="[]";
+        }
+        function stampaStorageSemplice(){
+            var u = JSON.parse(localStorage.utenti);
+            var l = u.length;
+            var s = new String("<h3>Stato di localStorage:</h3>");
+            for (i=0;i<l;i++)
+                s += JSON.stringify(u[i])+"<br/>";
+            document.getElementById("vistaStorage").innerHTML=s;
+            return true;
+        }
+        function stampaStorageTabella(){
+            var u = JSON.parse(localStorage.utenti);
+            var l = u.length;
+            var s = new String("<h3>Stato di localStorage:</h3>");
+            s +="<table border=1><tr><th>cognome</th><th>nome</th><th>matricola</th></tr>";
+            for (i=0;i<l;i++)
+                s += "<tr><td>"+u[i].c+"</td><td>"+u[i].n+"</td><td>"+u[i].m+"</td></tr>";
+            s += "</table>";
+            document.getElementById("vistaStorage").innerHTML = s;
+            return true;
+        }
+        function uguali(u,o){
+            if ((u.c==o.c)&&(u.n==o.n)&&(u.m==o.m))
+                return true;
+            return false;
+        }
+        function inserisciUtente() {
+            if (document.registrazione.cognome.value=="") {
+                alert("Inserire cognome");
+                return false;
+            }
+            if (document.registrazione.nome.value=="") {
+                alert("Inserire nome");
+                return false;
+            }
+            if (document.registrazione.matricola.value=="") {
+                alert("Inserire matricola");
+                return false;
+            }
+            var u = JSON.parse(localStorage.utenti);
+            var nextpos = u.length;
+            var o = { c:document.registrazione.cognome.value,
+                      n:document.registrazione.nome.value,
+                      m:document.registrazione.matricola.value };
+
+            for (i = 0; i < nextpos; i++)
+            if (uguali(u[i],o)) {
+                alert("Utente già inserito");
+                return false;
+            }
+            alert("Dati inseriti correttamente");
+            u[nextpos] = o;
+            localStorage.utenti = JSON.stringify(u);
+            return true;
+        }
+        window.addEventListener("load", () => { inizializzaStorageUtenti();});
+    </script>
+</head>
+<body>
+    <form action="" method="post" name="registrazione" onSubmit="return inserisciUtente();">
+    cognome:
+    <input type="text" name="cognome" size="40" maxlength="40">
+    <br>
+    nome:
+    <input type="text" name="nome" size="30" maxlength="30">
+    <br>
+    matricola:
+    <input type="text" name="matricola" size="12" maxlength="12">
+    <br>
+    <input type="submit" value="Invia">
+    <input type="button" value="Stampa Storage Semplice" onclick="stampaStorageSemplice();">
+    <input type="button" value="Stampa Storage Tabella" onclick="stampaStorageTabella();">
+    <input type="button" value="Reset Storage" onclick="resetStorageUtenti();">
+    <input type="reset" value="Reset form">
+    </form>
+    <hr/>
+    <div id="vistaStorage"></div>
+    <hr/>
+</body>
+</html>

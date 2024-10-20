@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esempio 3</title>
+    <script src="/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("#zonaDinamica"+this.id).load(this.innerHTML + ".txt",
+                  function(responseTxt, statusTxt, xhr) {
+                    if (statusTxt == "error") alert("Errore" + xhr.status + ":" + xhr.statusTxt);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <button id="1">Risorsa_1</button>
+        <button id="2">Risorsa_2</button>
+        <button id="3">Risorsa_3</button>
+        <button id="4">Risorsa_4</button>
+    </div>
+    <hr/>
+    <div id="zonaDinamica1">
+        Seleziona il documento da visualizzare
+    </div>
+    <div id="zonaDinamica2">
+        Seleziona il documento da visualizzare
+    </div>
+    <div id="zonaDinamica3">
+        Seleziona il documento da visualizzare
+    </div>
+    <div id="zonaDinamica4">
+        Seleziona il documento da visualizzare
+    </div>
+    <hr/>
+    Resto del documento<br/>
+</body>
+</html>

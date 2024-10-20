@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<form action="" method="post" name="eseform" enctype="multipart/form-data">
+    cognome e nome:
+    <input type="text" name="nome" size="50" maxlength="50" required>
+    <br>
+    data di nascita:
+    <input type="date" name="ddn">
+    <br>
+    CAP:
+    <input type="text" name="cap" size="5" maxlength="5" pattern="[0-9]{5}">
+    <br>
+    telefono:
+    <input type="tel" name="tel" size="15" maxlength="15" pattern="\+\d{2}-\d{3}-\d{7}">
+    <br>
+    <label for="worker">sono uno studente lavoratore</label>
+    <input type="checkbox" name="lavoratore" id="worker">
+    <br>
+    <input type="text" name="cf" maxlength="16" pattern="[A-Z]{6}\d{2}[A-Z]\d{2}[A-Z]\d{3}[A-Z]">
+    <br>
+    <input type="url" name="webpage" maxlength="50">
+    <br>
+    foto:
+    <input type="file" name="foto" accept="image/*" multiple>
+    <!-- ALTERNATIVA:
+    <input type="file" name="foto" accept=".png,.jpeg,.jpg,.gif,.png" multiple>
+    -->
+    <br>
+    descrizione lavoro:
+    <input type="text" name="descr" size="80" maxlength="80">
+    <br>
+    <br>
+    <input type="submit" value="Invia">
+    <input type="reset" value="Reset">
+</form>
+</body>
+</html>

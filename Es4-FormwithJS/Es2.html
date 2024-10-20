@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="application/javascript" src="script.js"></script>
+    </head>
+    <body>
+        <form method="get" action="" name="form2" onsubmit="return validaForm2();">
+        <table>
+            <tr>
+                <td align="right">cognome e nome:</td>
+                <td><input type="text" name="cognome_nome" maxlength=50 onchange="return verificaCognomeNome();"></td>
+            </tr>
+            <tr>
+                <td align="right">sesso: </td>
+                <td><input type="radio" name="sesso" value="M">M
+                    <input type="radio" name="sesso" value="F">F</td>
+            </tr>
+            <tr>
+                <td align="right">ateneo:</td>
+                <td><select size="1" rows="20" name="ateneo">
+                    <option selected value="nulla"> Seleziona </option>
+                    <option value="Lazio"> Sapienza</option>
+                    <option value="Liguria"> Tor Vergata</option>
+                    <option value="Campania"> Roma3</option>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">CAP:</td>
+                <td><input type="text" name="cap" minlength=5 maxlength=5 onchange="return verificaCap();"></td>
+            </tr>
+            <tr>
+                <td align="right">studente lavoratore:</td>
+                <td><input type="checkbox" name="lavoratore"></td>
+            </tr>
+            <tr>
+                <td align="right">descrizione del lavoro svolto:</td>
+                <td colspan=2><textarea name="descrizione" maxlength=80></textarea></td>
+            </tr>
+            <tr>
+                <td align="right"><input type="submit" value="Invia"></td>
+                <td><input type="reset" value="Reset"></td> 
+            </tr>
+        </table>
+        </form>
+    </body>
+</html>

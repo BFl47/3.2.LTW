@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <form action="" method="post" name="eseform" enctype="multipart/form-data">
+            <table border="1">
+                <tr>
+                    <td align="right">cognome e nome:
+                    <td><input type="text" name="nome" size="50" maxlength="50">
+                <tr>
+                    <td align="right">data di nascita:
+                    <td><input type="date" name="ddn">
+                <tr>
+                    <td align="right">CAP:
+                    <td><input type="number" name="cap" size="5" maxlength="5">
+                <tr>
+                    <td align="right">codice fiscale:
+                    <td><input type="text" name="cf" size="16" maxlength="16">
+                <tr>
+                    <td align="right">studente lavoratore:
+                    <td><input type="checkbox" name="lavoratore">
+                <tr>
+                    <td align="right">foto:
+                    <td><input type="file" name="foto">
+                <tr>
+                    <td align="right">giudizio:
+                    <td><input type="radio" name="giudizio" value="sufficiente">sufficiente
+                        <input type="radio" name="giudizio" value="buono">buono
+                        <input type="radio" name="giudizio" value="ottimo">ottimo
+                <tr>
+                    <td align="right">descrizione lavoro:
+                    <td><textarea name="descr" cols="60" rows="10"></textarea>
+                <tr>
+                    <td align="center"><input type="submit" value="Invia form">
+                    <td align="center"><input type="reset" value="Reset form">
+            </table>
+        </form>
+    </body>
+</html>

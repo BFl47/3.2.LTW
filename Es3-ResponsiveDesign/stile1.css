@@ -1,0 +1,9 @@
+.flexbox {
+    display: flex;
+    flex-flow: row-reverse wrap;
+}
+.cell { flex-grow: 1;}
+.flexbox > .cell:nth-child(1) { background-color: red;}
+.flexbox > .cell:nth-child(2) { background-color: yellow;}
+.flexbox > .cell:nth-child(3) { background-color: blue;}
+

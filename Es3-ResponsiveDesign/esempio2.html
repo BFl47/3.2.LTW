@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .grid {
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 2rem;
+            border: solid 2px;
+        }
+        .green { background-color:
+            rgba(178, 255, 106, 0.6); }
+        .vert { grid-area : 1 / 2 / span 3 / 2; }
+        .oriz { grid-area : 2 / 1 / 2 / span 3; }
+    </style >
+</head>
+
+<body>
+    <div class="grid">
+        <div class="green vert">1</div >
+        <div class= "green oriz">2</div >
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+</html>
