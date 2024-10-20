@@ -1,0 +1,5 @@
+<a href="/schede/schede.php" style="color: teal;">Qui</a> troverete una vasta selezione di schede di allenamento gratuite, suddivise per tipologia di esercizio e livello di intensità.
+Che siate nuovi al fitness o esperti atleti, abbiamo ciò di cui avete bisogno per raggiungere i vostri obiettivi di allenamento.
+Scegliete tra una varietà di programmi di allenamento che si adattano al vostro stile e ai vostri obiettivi.
+Se cercate un supporto più personalizzato, non esitate a esplorare la nostra sezione <a href="/coaching/coaching.php" style="color: teal;">Coaching</a> dove potrete ottenere schede create appositamente per voi da professionisti del settore.
+Iniziate oggi stesso il vostro viaggio verso una vita più sana e attiva!
